@@ -133,7 +133,7 @@ public class SidebarScoreboard implements Listener {
             }
         }
 
-        sidebar.updateLinesPeriodically(0, 20);
+
     }
 
 
@@ -221,7 +221,7 @@ public class SidebarScoreboard implements Listener {
             }
         }
 
-        sidebar.updateLinesPeriodically(0, 20);
+
     }
 
     private HashMap<String, Integer> orderLeaderboard(HashMap<String, Integer> unordered){

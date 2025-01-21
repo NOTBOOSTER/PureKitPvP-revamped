@@ -102,7 +102,7 @@ public class KitsGUI implements TabExecutor {
 
             ItemStack itemStack = new ItemStack(Material.BARRIER);
             ItemMeta itemMeta = itemStack.getItemMeta();
-            itemMeta.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+            itemMeta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
             itemMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 
             // Set gui item

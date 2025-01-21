@@ -74,6 +74,14 @@
             <id>sonatype-snapshots</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </repository>
+        <repository>
+            <id>catcoder-snapshots</id>
+            <url>https://catcoder.pl.ua/snapshots</url>
+        </repository>
+        <repository>
+            <id>viaversion-repo</id>
+            <url>https://repo.viaversion.com</url>
+        </repository>
 
     </repositories>
 
@@ -81,14 +89,14 @@
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.20.4-R0.1-SNAPSHOT</version>
+            <version>1.21.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 <!--        https://github.com/CatCoderr/ProtocolSidebar -->
         <dependency>
             <groupId>me.catcoder</groupId>
             <artifactId>bukkit-sidebar</artifactId>
-            <version>6.2.6-SNAPSHOT</version>
+            <version>6.2.10-SNAPSHOT</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.j256.ormlite/ormlite-jdbc -->
         <dependency>
@@ -96,6 +104,11 @@
             <artifactId>ormlite-jdbc</artifactId>
             <version>6.1</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.viaversion</groupId>
+            <artifactId>viaversion-api</artifactId>
+            <version>[5.0.0,6.0.0)</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 </project>
