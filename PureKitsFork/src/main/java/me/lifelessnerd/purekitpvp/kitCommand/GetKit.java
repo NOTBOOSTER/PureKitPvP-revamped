@@ -112,13 +112,22 @@ public class GetKit implements TabExecutor, Listener {
             throw new RuntimeException(e);
         }
 
-        //Give items
+        // Give items with index validation
         for (int index = 0; index < kitItems.size(); index++) {
             ItemStack item = kitItems.get(index);
             if (item == null) {
                 item = new ItemStack(Material.AIR);
             }
-            player.getInventory().setItem(playerPrefs.getOrDefault(index, index), item);
+
+            // Get the target slot index with validation
+            int targetSlot = playerPrefs.getOrDefault(index, index);
+            if (targetSlot < 0 || targetSlot > 40) {
+                plugin.getLogger().warning("Invalid inventory slot index: " + targetSlot + " for player: " + player.getName());
+                continue; // Skip invalid slots
+            }
+
+            // Set the item in the player's inventory
+            player.getInventory().setItem(targetSlot, item);
         }
 
 
